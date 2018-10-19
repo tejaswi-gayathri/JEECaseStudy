@@ -397,94 +397,71 @@ SQL> desc cardts;
  CARMODEL                                  NOT NULL VARCHAR2(20)
  INSURANCEID                               NOT NULL VARCHAR2(20)
 
-SQL> create table serviceCost(carModel varchar2(20),service varchar2(40),serviceAmount number(8,2));
+SQL> create table serviceCostdts(carModel varchar2(20),service varchar2(40),serviceAmount number(8,2));
 
 Table created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('SUV','WheelBalancing',2000);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('SUV','WheelBalancing',5000);
 
 1 row created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('SUV','Polishing',2500);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('SUV','Polishing',5500);
 
 1 row created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('SUV','SuspensionSystems'3000);
-insert into serviceCost(carModel,service,serviceAmount) values('SUV','SuspensionSystems'3000)
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('SUV','SuspensionSystems'6000);
+insert into serviceCostdts(carModel,service,serviceAmount) values('SUV','SuspensionSystems'6000)
                                                                                     *
 ERROR at line 1:
 ORA-00917: missing comma 
 
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('SUV','SuspensionSystems',3000);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('SUV','SuspensionSystems',7000);
 
 1 row created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('SUV','Decor',2500);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('SUV','Decor',5500);
 
 1 row created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('SUV','ACCompressorReplacement',4000);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('SUV','ACCompressorReplacement',7000);
 
 1 row created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('Sedan','ACCompressorReplacement',4500);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('Sedan','ACCompressorReplacement',7500);
 
 1 row created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('Sedan','Decor',2700);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('Sedan','Decor',5700);
 
 1 row created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('Sedan','SuspensionSystems',4000);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('Sedan','SuspensionSystems',6000);
 
 1 row created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('Sedan','Polishing',3000);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('Sedan','Polishing',6000);
 
 1 row created.
 
-SQL> insert into serviceCost(carModel,service,serviceAmount) values('Sedan','WheelBalancing',2000);
+SQL> insert into serviceCostdts(carModel,service,serviceAmount) values('Sedan','WheelBalancing',5000);
 
 1 row created.
-
-SQL> select * from serviceCost;
-
-CARMODEL             SERVICE                                  SERVICEAMOUNT     
--------------------- ---------------------------------------- -------------     
-SUV                  WheelBalancing                                    2000     
-SUV                  Polishing                                         2500     
-SUV                  SuspensionSystems                                 3000     
-SUV                  Decor                                             2500     
-SUV                  ACCompressorReplacement                           4000     
-Sedan                ACCompressorReplacement                           4500     
-Sedan                Decor                                             2700     
-Sedan                SuspensionSystems                                 4000     
-Sedan                Polishing                                         3000     
-Sedan                WheelBalancing                                    2000     
-
-10 rows selected.
-
-SQL> alter table serviceCost rename to serviceCostdts;\
-  2  
-SQL> alter table serviceCost rename to serviceCostdts;
-
-Table altered.
 
 SQL> select * from serviceCostdts;
 
 CARMODEL             SERVICE                                  SERVICEAMOUNT     
 -------------------- ---------------------------------------- -------------     
-SUV                  WheelBalancing                                    2000     
-SUV                  Polishing                                         2500     
-SUV                  SuspensionSystems                                 3000     
-SUV                  Decor                                             2500     
-SUV                  ACCompressorReplacement                           4000     
-Sedan                ACCompressorReplacement                           4500     
-Sedan                Decor                                             2700     
-Sedan                SuspensionSystems                                 4000     
-Sedan                Polishing                                         3000     
-Sedan                WheelBalancing                                    2000     
+SUV                  WheelBalancing                                    5000     
+SUV                  Polishing                                         5500     
+SUV                  SuspensionSystems                                 7000     
+SUV                  Decor                                             5500     
+SUV                  ACCompressorReplacement                           7000     
+Sedan                ACCompressorReplacement                           7500     
+Sedan                Decor                                             5700     
+Sedan                SuspensionSystems                                 6000     
+Sedan                Polishing                                         6000     
+Sedan                WheelBalancing                                    5000     
 
 10 rows selected.
 
